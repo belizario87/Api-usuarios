@@ -1,7 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
-import usuarios from "../database/database.js";
-import ControllerUsuarios from "../controller/usuarioController.js";
+import usuarios from "./database/database.js";
+import ControllerUsuarios from "./controller/usuarioController.js";
 
 dotenv.config();
 
