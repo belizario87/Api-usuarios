@@ -1,0 +1,20 @@
+{
+  "name": "api-pessoas",
+  "version": "1.0.0",
+  "main": "ser.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --watch ./server/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "express": "^5.1.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.0.0"
+  }
+}
