@@ -3,8 +3,10 @@ import ControllerUsuarios from "../controller/usuarioController.js";
 
 const rotas = Router();
 
-rotas.get("/usuarios", (req, res) => {
-  res.json(ControllerUsuarios.listarUsuarios());
-});
+rotas.get("/usuarios", ControllerUsuarios.listarUsuarios);
+
+rotas.post("/usuarios", ControllerUsuarios.salvarUsuario);
+
+rotas.put("/usuario/:id", ControllerUsuarios.atualizarUsuario);
 
 export default rotas;
