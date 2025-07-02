@@ -33,8 +33,20 @@ const atualizarUsuario = function (req, res) {
   return res.status(200).json(arrayUsuarios[usuarioIndex]);
 };
 
+const deletarUsuario = function (req, res) {
+  const { id } = req.params;
+  const usuarioIndex = arrayUsuarios.findIndex((usuario) => usuario.id === id);
+  if (usuarioIndex === -1) {
+    return res.status(404).json({ message: "Usuário nao encontrado" });
+  }
+
+  arrayUsuarios.splice(usuarioIndex, 1);
+  return res.status(200).json({ message: "Usuário deletado com sucesso" });
+};
+
 export default {
   listarUsuarios,
   salvarUsuario,
   atualizarUsuario,
+  deletarUsuario,
 };
